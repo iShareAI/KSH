@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ken Sargent House — Ishare 360°</title>
+  <link rel="icon" href="img/letra-i.png" type="image/png">
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+
+   <style>
+    html, body { height: 100%; margin: 0; }
+    body { background: #ffffff; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans"; }
+
+    
+    
+    
+    
+    
+    
+    /* Centered responsive container */
+    #viewer {
+      position: relative;
+      width: min(1200px, 95vw);
+      aspect-ratio: 16 / 9;
+      margin: 20px auto 16px;
+      background: #000;
+      border: none;                /* no frame around iframe */
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* Fill the container */
+    #viewer iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none !important;
+      outline: none;
+      box-shadow: none;
+    }
+    /* Hairline border on HiDPI for extra crispness */
+    
+      /* Full-width table styles */
+    .table-wrap { width: min(1200px, 95vw); margin: 16px auto 48px; }
+    .naming-table { width: 100%; border-collapse: collapse; font-size: 16px; }
+    .naming-table thead th { background: #f6f7f9; color: #111; text-align: left; padding: 8px 16px; border-bottom: 1px solid #e6e8eb; font-weight: 600; }
+    .naming-table tbody td { padding: 9.6px 16px; border-bottom: 1px solid #e6e8eb; }
+    .naming-table td.cost, .naming-table td.avail { text-align: right; white-space: nowrap; }
+    .naming-table tbody tr:nth-child(even) { background: transparent; }
+      .naming-table tbody tr:hover { background: #f9fafb; }
+      /* Section titles */
+    .section { width: min(1200px, 95vw); margin: 16px auto 8px; }
+   .page-title {
+  text-align: left;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;                 /* вместо 800 — мягче */
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: 6px 0 10px;
+  font-size: clamp(22px, 3.4vw, 34px);
+  position: relative;
+  animation: fadeUp .7s ease both;
+  color: #0f172a;                   /* спокойный тёмный */
+}
+
+.page-title:before {
+  content: none;                    /* убираем боковую полоску */
+}
+
+.page-title .accent {
+  color: #0f172a;                   /* обычный тёмный текст */
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.page-title .muted {
+  color: #475569;                   /* приглушённый серый */
+  font-weight: 500;
+}
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: none; } }
+    .table-title { text-align: left; font-family: 'Inter', system-ui; font-weight: 700; margin: 12px auto 8px; width: min(1200px,95vw); animation: fadeUp .7s ease .1s both; }
+    .naming-table tbody tr { opacity: 0; transform: translateY(8px); animation: fadeUp .5s ease forwards; }
+    .naming-table tbody tr:nth-child(1)  { animation-delay: .05s; }
+    .naming-table tbody tr:nth-child(2)  { animation-delay: .10s; }
+    .naming-table tbody tr:nth-child(3)  { animation-delay: .15s; }
+    .naming-table tbody tr:nth-child(4)  { animation-delay: .20s; }
+    .naming-table tbody tr:nth-child(5)  { animation-delay: .25s; }
+    .naming-table tbody tr:nth-child(6)  { animation-delay: .30s; }
+    .naming-table tbody tr:nth-child(7)  { animation-delay: .35s; }
+    .naming-table tbody tr:nth-child(8)  { animation-delay: .40s; }
+    .naming-table tbody tr:nth-child(9)  { animation-delay: .45s; }
+    .naming-table tbody tr:nth-child(10) { animation-delay: .50s; }
+    .naming-table tbody tr:nth-child(11) { animation-delay: .55s; }
+    .naming-table tbody tr:nth-child(12) { animation-delay: .60s; }
+    .naming-table tbody tr:nth-child(13) { animation-delay: .65s; }
+    .naming-table tbody tr:nth-child(14) { animation-delay: .70s; }
+    .naming-table tbody tr:nth-child(15) { animation-delay: .75s; }
+    @media (prefers-reduced-motion: reduce) {
+      .page-title, .table-title, .naming-table tbody tr { animation: none !important; opacity: 1; transform: none; }
+    }
+      /* ——— WORKFLOW BLOCK ——— */
+    .wf { width: min(1200px, 95vw); margin: 24px auto 40px; }
+    .wf-title { text-align: left; font-family: 'Poppins', 'Inter', system-ui; font-weight: 800; margin: 6px 0 12px; font-size: clamp(18px, 2.6vw, 24px); letter-spacing: .2px; animation: fadeUp .7s ease both; }
+    .wf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: start; }
+    .wf-video { position: relative; width: 100%; background: #fff; border-radius: 12px 0 0 12px; overflow: hidden; aspect-ratio: 16 / 9; height: auto; }
+    .wf-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; outline: none; pointer-events: none; }
+    .wf-text { display: flex; flex-direction: column; justify-content: flex-start; gap: 10px; animation: fadeUp .7s ease .1s both; background: none; color: #555; padding: 12px 16px; border-radius: 0 12px 12px 0; }
+    .wf-h { font-family: 'Poppins', 'Inter', system-ui; font-weight: 800; margin: 0 0 6px; font-size: clamp(18px, 2.4vw, 22px); color: #2b2b2b; opacity: 0; transform: translateY(8px); animation: fadeUp .6s ease .05s forwards; }
+    .wf-lead { margin: 0 0 8px; color: #555; opacity: 0; transform: translateY(8px); animation: fadeUp .6s ease .1s forwards; }
+    .wf-steps { list-style: none; padding: 0; margin: 8px 0 0; }
+    .wf-steps li { position: relative; padding: 8px 0 8px 14px; border-bottom: 1px solid #eee; opacity: 0; transform: translateY(8px); animation: fadeUp .5s ease forwards; }
+    .wf-steps li::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: #4b5cff; opacity: .6; }
+    .wf-steps li:nth-child(1) { animation-delay: .05s; }
+    .wf-steps li:nth-child(2) { animation-delay: .10s; }
+    .wf-steps li:nth-child(3) { animation-delay: .15s; }
+    .wf-steps li:nth-child(4) { animation-delay: .20s; }
+    .wf-steps li:nth-child(5) { animation-delay: .25s; }
+    @media (max-width: 900px) { .wf-grid { grid-template-columns: 1fr; gap: 12px; } .wf-video { border-radius: 12px; } .wf-text { border-radius: 12px; } }
+      /* Workflow content extras */
+    .wf-sub { font-family: 'Inter', system-ui; font-weight: 700; margin: 10px 0 6px; color: #333; }
+    .wf-list { list-style: none; padding: 0; margin: 0 0 6px; }
+    .wf-list li { position: relative; padding: 6px 0 6px 14px; border-bottom: 1px solid #e6e8eb; opacity: 0; transform: translateY(6px); animation: fadeUp .5s ease forwards; }
+    .wf-list li::before { content: ""; position: absolute; left: 0; top: 13px; width: 6px; height: 6px; border-radius: 50%; background: #9aa5b1; }
+    .wf-list li:nth-child(1) { animation-delay: .05s; }
+    .wf-list li:nth-child(2) { animation-delay: .10s; }
+    .wf-list li:nth-child(3) { animation-delay: .15s; }
+    .wf-list li:nth-child(4) { animation-delay: .20s; }
+    .wf-list li:nth-child(5) { animation-delay: .25s; }
+    .wf-list li:nth-child(6) { animation-delay: .30s; }
+    .wf-list li:nth-child(7) { animation-delay: .35s; }
+    .wf-list li:nth-child(8) { animation-delay: .40s; }
+    .wf-list li:nth-child(9) { animation-delay: .45s; }
+    .wf-list li:nth-child(10){ animation-delay: .50s; }
+      /* White preload/letterbox mask */
+    .wf-mask { display: none !important; }
+      /* White mask to hide black letterbox while loading */
+    .wf-mask { display: none !important; }
+      /* Chessboard (alternating) layout for workflow blocks */
+    .wf-grid.alt { grid-template-columns: 1fr 1fr; }
+    .wf-grid.alt .wf-video { order: 2; border-radius: 0 12px 12px 0; }
+    .wf-grid.alt .wf-text  { order: 1; border-radius: 12px 0 0 12px; }
+    @media (max-width: 900px) {
+      .wf-grid.alt { grid-template-columns: 1fr; gap: 12px; }
+      .wf-grid.alt .wf-video, .wf-grid.alt .wf-text { order: initial; border-radius: 12px; }
+    }
+      /* —— Stage Four: full‑width video + text below —— */
+    .wf-full { width: min(1200px, 95vw); margin: 24px auto 40px; }
+    .wf-video.full { border-radius: 12px; background: #fff; aspect-ratio: 16 / 9; position: relative; overflow: hidden; }
+    .wf-video.full iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; outline: none; pointer-events: none; }
+    .wf-text.wide { background: none; color: #555; padding: 12px 2px 0; border-radius: 12px; }
+    .wf-text.wide .wf-h { color: #2b2b2b; }
+      /* —— Stage Six: full‑bleed (full screen) video + text below —— */
+    .wf-bleed { width: 100vw; margin: 0 calc(50% - 50vw); }
+    .hero-video { position: relative; height: 100vh; background: #fff; overflow: hidden; }
+    .hero-video iframe { position: absolute; top: 50%; left: 50%; border: 0; outline: none; pointer-events: none; transform: translate(-50%, -50%); }
+    /* Cover rules for 16:9: choose dimension by aspect ratio to fill the viewport */
+    @media (min-aspect-ratio: 16/9) { .hero-video iframe { width: 100vw; height: 56.25vw; } }
+    @media (max-aspect-ratio: 16/9) { .hero-video iframe { width: 177.78vh; height: 100vh; } }
+
+    .naming-table tbody tr[data-pano] { cursor: pointer; }
+.naming-table tbody tr.active { background: #eef2ff; }
+
+/* Мини-плеер превью */
+.hover-preview {
+  position: fixed;                /* якорим к окну, удобнее позиционировать */
+  width: 280px;                   /* можно менять, держим 16:9 */
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, .25);
+  opacity: 0;
+  transform: translateY(6px) scale(.98);
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 9999;
+  pointer-events: none;           /* не перехватывает курсор, чтобы не мигало */
+}
+.hover-preview.show {
+  opacity: 1;
+  transform: none;
+}
+.hover-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+}
+
+
+
+/* Панель слева оставляем как есть */
+.viewer-ui{
+  position:absolute; top:12px; left:12px; z-index:2;
+  background:rgba(255, 255, 255, 0);
+  opacity: 0.5;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border-radius:10px; padding:8px; pointer-events:auto;
+}
+
+/* Селект: белый фон + тёмный текст, чтобы всё читалось */
+#panoSelect{
+  appearance:none;
+  font:500 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  color:#111;                            /* тёмный текст */
+  background:rgba(255,255,255,.96);      /* светлый фон */
+  border:1px solid #d1d5db;              /* светлая рамка */
+  border-radius:8px;
+  padding:8px 32px 8px 10px;
+  min-width:240px; max-width:62vw; outline:none;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+}
+#panoSelect:focus{ box-shadow:0 0 0 2px rgba(99,102,241,.35); }
+
+/* Короткая подсветка ошибки при выборе пункта без ссылки */
+#panoSelect.invalid{
+  border-color:#ef4444 !important;
+  box-shadow:0 0 0 2px rgba(239,68,68,.35) !important;
+}
+
+
+
+/* Хедер */
+
+
+
+
+/* Внутренняя обёртка: чуть паддинга справа,
+   чтобы меню не липло к самому краю */
+.nav-inner{
+  width:min(1200px,95vw);
+  margin:0 auto;
+  display:flex; align-items:center; gap:16px;
+  padding:30px 12px;                 /* ← добавили правый (и левый) отступ */
+}
+
+/* Лого слева — как было */
+.brand img{ display:block; height:32px; width:auto; }
+
+/* МЕНЮ справа */
+.nav{
+  margin-left:auto;                   /* ← уводим блок меню вправо */
+  display:flex; gap:12px;             /* ← расстояние между кнопками */
+  justify-content:flex-end;           /* ← прижимаем к правому краю контейнера */
+  flex-wrap:wrap;
+}
+
+.nav-link{
+  color:#e5e7eb; text-decoration:none;
+  padding:8px 12px; border-radius:8px;
+}
+.nav-link:hover,.nav-link.active{ background:#257cff; color:#fff }
+
+@media (max-width:640px){
+  .brand img{ height:26px; }
+  .nav-link{ padding:6px 10px; font-size:14px; }
+}
+
+.nav-link.caps{ text-transform:uppercase; letter-spacing:.02em; }
+
+
+
+/* === Philanthropy Hero === */
+/* === Hero adapter: делаем hero-phil строгим, как таблицы === */
+
+/* 1) Бейдж на всю ширину (как «инпут» сверху слева) */
+.hero-phil.badge-wide .hero-badge{
+  display:block;
+  width:100%;
+  padding:8px 12px;
+  background:#f8fafc;
+  border:1px solid #e6e8eb;
+  color:#111;
+  border-radius:6px;
+}
+
+/* 2) Акцент под шапку (#0077ff/#257cff) */
+.hero-phil.is-brand{ --accent:#257cff; --ring:rgba(37,124,255,.28); }
+
+/* 3) Кнопки — матовый синий и мягкий hover */
+.hero-phil .btn-primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+  box-shadow:0 1px 0 rgba(0,0,0,.03), 0 8px 16px rgba(2,6,23,.12);
+}
+.hero-phil .btn-primary:hover{ filter:brightness(.96); }
+.hero-phil .btn-ghost{ background:#fff; }
+.hero-phil .btn-ghost:hover{ background:#f8fafc; }
+
+/* 4) Чуть компактнее вертикальные отступы */
+.hero-phil.compact{ padding:12px 14px; }
+.hero-phil.compact .hero-lead{ margin-top:6px; }
+.hero-phil.compact .hero-stats{ margin-top:8px; gap:8px; }
+
+/* 5) На широких — баланс колонок как в скрине */
+@media (min-width: 980px){
+  .hero-phil{ grid-template-columns: 1.05fr .95fr; }
+}
+
+
+
+
+html { scroll-behavior: smooth; }
+/* чтобы заголовок не прятался под липкий header */
+#naming { scroll-margin-top: 88px; }  /* подгони число под реальную высоту шапки */
+@media (max-width: 640px){
+  #naming { scroll-margin-top: 72px; }
+}
+
+/* Funding snapshot (чипы, как KPI) */
+.hero-funding{
+  display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 0; padding:0; list-style:none;
+}
+.hero-funding li{
+  display:flex; gap:8px; align-items:baseline;
+  padding:6px 10px; border:1px solid var(--border); border-radius:8px; background:#fff;
+}
+.hero-funding .k{ font:700 12px/1.1 Inter, system-ui; color:#0f172a; text-transform:uppercase; letter-spacing:.04em; }
+.hero-funding .v{ font:600 12px/1.1 Inter, system-ui; color:#475569; }
+
+
+/* ——— Hero polish ——— */
+.hero-phil.luxe{                     /* мягкий «премиум» каркас */
+  position:relative; border-radius:12px;
+  border:1px solid var(--border); background:#fff;
+  padding:14px 16px; display:grid; gap:16px;
+}
+
+
+/* заголовок — лёгкий градиент только на 2-й строке */
+.hero-phil .hero-line.gradient{
+  background:linear-gradient(90deg,var(--accent) 0%,#9333ea 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+
+/* мини-мета под заголовком */
+.hero-meta{ display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+  color:#475569; font:600 12px/1.2 Inter, system-ui;
+}
+.hero-meta .dot{ width:4px; height:4px; border-radius:50%; background:#cbd5e1; }
+
+/* KPI-чипы в виде карточек */
+.hero-stats.card{
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px; margin-top:8px; padding:0; list-style:none;
+}
+.hero-stats.card li{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; background:#fff; border:1px solid var(--border);
+  border-radius:10px; box-shadow:0 1px 0 rgba(0,0,0,.03);
+}
+.hero-stats.card li strong{ font:800 18px/1 Inter; color:#0f172a; }
+.hero-stats.card li span{ font:600 12px/1.2 Inter; color:#475569; }
+
+/* компактные кнопки */
+.hero-ctas .btn{ height:38px; padding:0 14px; border-radius:10px; }
+.hero-ctas .btn-outline{ background:transparent; border:1px solid var(--border); color:#0f172a; }
+.hero-ctas .btn-outline:hover{ background:#f8fafc; }
+
+@media (max-width:900px){ .hero-stats.card{ grid-template-columns:1fr 1fr; } }
+
+
+/* Двухколоночный hero: mobile-first */
+.hero-phil{
+  display:grid;
+  grid-template-columns: 1fr;      /* мобильная одна колонка */
+  align-items:start;
+  gap:18px;
+}
+@media (min-width: 980px){
+  .hero-phil{ grid-template-columns: 360px 1fr; } /* слева бейдж, справа контент */
+}
+
+
+/* Явно укажем области */
+.hero-left{ align-self:start; }
+.hero-right{ display:flex; flex-direction:column; gap:12px; }
+
+/* Бейдж – компактный, не растягивается по высоте */
+.hero-badge{
+  display:block; width:100%; height:auto; 
+  padding:10px 12px; background:#f8fafc; color:#111;
+  border:1px solid #e6e8eb; border-radius:10px;
+  font:600 13px/1.2 Inter, system-ui; letter-spacing:.02em;
+}
+
+/* Чуть плотнее кпи-чипы */
+.hero-stats.card{ margin-top:4px; }
+
+
+
+/* лёгкий shimmer у второй строки заголовка */
+.hero-phil .hero-line.gradient{
+  background:linear-gradient(90deg,var(--accent) 0%,#9333ea 50%,#06b6d4 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  background-size:200% 100%;
+  animation:heroShimmer 6s ease-in-out infinite;
+}
+@keyframes heroShimmer{ 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+/* мягкий «ореол» за правым столбцом */
+.hero-phil.luxe::after{
+  content:"";
+  position:absolute; inset: -4px -4px -4px 340px;  /* не заезжает под левую рейку */
+  pointer-events:none; z-index:0;
+  background:radial-gradient(600px 260px at 60% 15%, rgba(37,124,255,.10), transparent 60%);
+}
+.hero-right{ position:relative; z-index:1; } /* поверх ореола */
+
+
+.hero-ctas .btn{
+  position:relative; border:1px solid transparent; transition:transform .06s ease;
+}
+.hero-ctas .btn:active{ transform:translateY(1px); }
+.hero-ctas .btn-primary:focus-visible{
+  box-shadow:0 0 0 6px var(--ring);
+}
+
+
+/* HERO: full-width, no left badge */
+.hero-phil .hero-left,
+.hero-phil .hero-badge{
+  display:none !important;           /* скрыть колонку и сам бейдж */
+}
+
+.hero-phil{
+  grid-template-columns: 1fr !important; /* одна колонка на всю ширину */
+}
+
+.hero-phil .hero-right{
+  grid-column: 1 / -1;               /* контент растягивается на весь hero */
+  margin: 0; padding-left: 0;        /* без «откушенного» левого поля */
+}
+
+/* если где-то остался зазор — подстрахуемся */
+.section > .hero-phil{ width:100%; }
+
+/* (опционально) если захочешь убрать цветную рейку слева — раскомментируй: */
+/* .hero-phil.luxe::before{ display:none; } */
+
+/* если убрали .hero-left из разметки */
+.hero-phil{ grid-template-columns: 1fr; }
+
+
+/* делаем --ang анимируемым */
+@property --ang {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ключевые кадры: 1 полный оборот */
+@keyframes nav-ring-spin {
+  to { --ang: 1turn; }
+}
+
+
+
+
+
+/* NAV: бегущая обводка при hover/focus */
+.nav-link{
+  position: relative;
+  border-radius: 8px;       /* держим как у тебя */
+  isolation: isolate;       /* псевдоэлемент над фоном, но клики проходят */
+}
+
+/* рисуем тонкое кольцо поверх кнопки и крутим его конусным градиентом */
+.nav-link::before{
+  --ring-w: 2px;            /* толщина обводки */
+
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--ring-w));      /* чтобы кольцо не «съедало» padding */
+  border-radius: inherit;
+  padding: var(--ring-w);
+
+  background: conic-gradient(from var(--ang,0deg),
+             #dbeafc, #eae1ff, #d2edf1, #ffffff);
+
+  /* показываем только «кольцо», а центр – прозрачный */
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+                 linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s ease;
+  animation: nav-ring-spin  2.5s linear infinite paused;
+}
+
+.nav-link:hover::before,
+.nav-link:focus-visible::before{
+  opacity: .9;
+  animation-play-state: running;
+}
+
+@keyframes nav-ring-spin{
+  to { --ang: 360deg; }
+}
+
+/* уважение к людям с ограничением анимаций: просто мягкая подсветка */
+@media (prefers-reduced-motion: reduce){
+  .nav-link::before{ animation: none; opacity: 0; }
+  .nav-link:hover::before,
+  .nav-link:focus-visible::before{ opacity: .6; }
+}
+
+/* Фолбэк для очень старых браузеров: тонкая статичная рамка при hover */
+@supports not ((mask-composite: exclude) or (-webkit-mask-composite: xor)){
+  .nav-link:hover{ outline: 2px solid #8b5cf6; outline-offset: 0; }
+}
+
+/* только для кнопок в hero */
+.hero-ctas .btn,
+.hero-ctas .btn:link,
+.hero-ctas .btn:visited,
+.hero-ctas .btn:hover,
+.hero-ctas .btn:focus,
+.hero-ctas .btn:active {
+  text-decoration: none;     /* убрать underline */
+  color: #fff;               /* на всякий случай зафиксируем белый */
+}
+
+/* чуть аккуратнее выравнивание и форма */
+.hero-ctas .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 9999px;     /* идеально круглые края (можно оставить 10px, если так нужно) */
+  line-height: 1;            /* без «подпрыгивания» текста */
+}
+
+
+/* 1) Никогда не даём странице разъезжаться по оси X */
+html, body { overflow-x: hidden; }
+
+/* 2) Клипнем декоративный ореол внутри hero, чтобы он не создавал скролл */
+.hero-phil { overflow: hidden; }
+
+/* 3) Уточним поведение сеток на узких экранах — карточки могут сжиматься */
+.hero-stats.card li,
+.hero-funding li { min-width: 0; }      /* разрешаем сжатие */
+.hero-stats.card li span { word-break: break-word; }
+
+/* 4) Совсем узкие экраны — в одну колонку, гарантированно без переполнения */
+@media (max-width: 420px){
+  .hero-stats.card { grid-template-columns: 1fr; }
+}
+
+/* 5) «Бегущая» обводка у нав-ссылок не должна влиять на макет */
+.nav-link { contain: paint; }           /* изолируем перерисовку псевдоэлемента */
+
+
+/* не даём странице расползаться по X */
+html, body { overflow-x: hidden; }
+
+/* ширина 95vw С УЧЁТОМ padding */
+.nav-inner,
+.section,
+.table-wrap,
+#viewer,
+.wf,
+.wf-full {
+  box-sizing: border-box;
+}
+
+/* таблицы: не выталкивать контейнер и красиво переносить текст */
+.table-wrap { overflow-x: hidden; }           /* или auto, если хочешь горизонтальный скролл только у таблицы */
+.naming-table { width: 100%; table-layout: auto; }
+.naming-table th, .naming-table td { min-width: 0; }
+.naming-table .desc { word-break: break-word; }
+
+/* ореол hero клипим внутри, чтобы не создавать скролл */
+.hero-phil { overflow: hidden; }
+@media (max-width: 480px){
+  .hero-phil.luxe::after{ inset: -2px -2px -2px 120px; }
+}
+
+/* общее: нормальная переносимость текста и выравнивание */
+.naming-table th, .naming-table td { vertical-align: top; }
+.naming-table .desc { white-space: normal; word-break: break-word; overflow-wrap: anywhere; }
+
+/* на мобиле отключаем fade-анимацию строк, чтобы текст не исчезал */
+@media (max-width:700px){
+  .naming-table tbody tr{
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* Мобильная раскладка «карточкой» только для второй таблицы */
+@media (max-width:700px){
+  .naming-table.stack thead { display: none; }   /* прячем шапку */
+
+  .naming-table.stack tbody tr{
+    display: grid;
+    grid-template-columns: 1fr auto auto;        /* Space | Cost | # */
+    grid-template-areas:
+      "space cost avail"
+      "desc  desc desc";                          /* описание — на всю ширину */
+    gap: 8px 10px;
+    padding: 12px 10px;
+    border-bottom: 1px solid #e6e8eb;
+  }
+
+  .naming-table.stack td{ padding: 0; border: 0; }
+  .naming-table.stack td:nth-child(1){ grid-area: space; font-weight: 600; }
+  .naming-table.stack td:nth-child(2){ grid-area: cost; text-align: right; white-space: nowrap; }
+  .naming-table.stack td:nth-child(3){ grid-area: avail; text-align: right; white-space: nowrap; }
+  .naming-table.stack td:nth-child(4){ grid-area: desc;  color:#555; line-height: 1.35; }
+}
+
+
+/* ==== HEADER FX PACK ==== */
+:root{
+  --hdr-accent:#257cff;
+  --hdr-bg: rgba(0,119,255,.78);
+  --hdr-blur: 10px;
+  --hdr-speed: .25s;                /* базовая скорость анимаций */
+}
+
+/* сам header: стекло + плавные переходы */
+.site-header{
+  position: sticky; top:0; z-index:50;
+  background: var(--hdr-bg);
+  backdrop-filter: blur(var(--hdr-blur));
+  -webkit-backdrop-filter: blur(var(--hdr-blur));
+  box-shadow: 0 10px 30px rgba(2,6,23,.10);
+  transform: translateZ(0);
+  transition:
+    background var(--hdr-speed) ease,
+    transform .22s ease;            /* для автоскрытия */
+}
+
+/* компактный режим при скролле */
+.site-header.is-compact .nav-inner{ padding: 10px 12px; }
+.site-header .nav-inner{ transition: padding var(--hdr-speed) ease; }
+.site-header.is-compact .brand img{ height: 24px; transition: height var(--hdr-speed); }
+
+/* авто-скрытие при скролле вниз */
+.site-header.is-hidden{ transform: translateY(-100%); }
+
+/* «бегущая» тонкая линия снизу */
+.site-header::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--hdr-accent) 20%,
+    #9333ea 50%,
+    #06b6d4 80%,
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: hdr-shimmer 6s linear infinite;
+  opacity:.7; pointer-events:none;
+}
+@keyframes hdr-shimmer{ to{ background-position:200% 0; } }
+
+/* прогресс-бар прокрутки (добавится скриптом) */
+.site-header .scrollbar{
+  position:absolute; left:0; bottom:0; height:2px; width:100%;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--hdr-accent), #9333ea);
+  pointer-events:none; mix-blend-mode: soft-light;
+}
+
+/* маркер, который «ездит» по пунктам меню */
+.nav{ position:relative; }
+.nav-marker{
+  position:absolute; top:50%; transform: translateY(-50%);
+  height:34px; border-radius:8px;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.15);
+  transition: left .25s ease, width .25s ease, opacity .2s ease;
+  opacity:0; pointer-events:none;
+}
+.nav:hover .nav-marker{ opacity:1; }
+
+/* лёгкий hover у ссылок + твоя «бегущая обводка» остаётся */
+.nav-link{ transition: background .15s ease, transform .06s ease; }
+.nav-link:active{ transform: translateY(1px); }
+
+/* без лишних движух для тех, кто не любит анимации */
+@media (prefers-reduced-motion: reduce){
+  .site-header::after, .site-header .scrollbar, .nav-marker{ animation:none; transition:none; }
+}
+
+
+
+/* глобальные ручки */
+.site-header{
+  --ring-speed: 1.6s;        /* скорость «бегущей» обводки у пунктов меню */
+  --hdr-line-speed: 5s;      /* скорость бегущей линии снизу хедера */
+  --hdr-speed: .25s;         /* скорость сжатия/раскрытия хедера */
+}
+
+/* привязываем переменные к анимациям */
+.nav-link::before{
+  animation: nav-ring-spin var(--ring-speed,2.5s) linear infinite paused;
+}
+.site-header::after{
+  animation: hdr-shimmer var(--hdr-line-speed,6s) linear infinite;
+}
+@media (max-width: 700px){
+  .nav-marker{ display:none; }
+}
+@media (max-width:700px){
+  .naming-table.stack tbody tr{ gap:6px 8px; padding:10px; }
+  .naming-table.stack .desc{ font-size:14px; line-height:1.35; }
+  .naming-table.stack .desc br{ display:none; }  /* режем лишние разрывы */
+}
+
+.nav-link:focus-visible{
+  outline: 2px solid rgba(255,255,255,.9);
+  outline-offset: 2px;
+}
+
+.is-hidden{ display:none !important; }
+
+
+/* Keep buttons in a row with spacing */
+.hero-ctas{ display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Pill shape */
+.btn-pill{ border-radius:9999px !important; }
+
+/* Orange button */
+.hero-ctas .btn.btn-orange{
+  background:#ff7a1a !important;
+  border-color:#ff7a1a !important;
+  color:#fff !important;
+  box-shadow:0 8px 24px rgba(255,122,26,.25) !important;
+}
+.hero-ctas .btn.btn-orange:hover{ filter:brightness(.96); }
+.hero-ctas .btn.btn-orange:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 6px rgba(255,122,26,.28) !important;
+}
+
+
+/* badges + taken rows */
+.badge{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 8px; border-radius:9999px; font:600 12px/1 Inter,system-ui;
+  border:1px solid #e5e7eb; background:#fff; color:#334155;
+}
+.badge-named{ background:#fef3c7; border-color:#fde68a; color:#92400e; }
+tr.taken .avail{ color:#ef4444; font-weight:700; }
+td.idx{ width:36px; color:#64748b; }
+
+
+
+
+.media-hero{ position:relative; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,.12); }
+.media-hero .frame{ position:relative; aspect-ratio:16/9; background:#000; }
+.media-hero iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; outline:0; }
+.media-hero .overlay{ position:absolute; inset:0; background:radial-gradient(80% 60% at 70% 0%, rgba(37,124,255,.18), transparent 60%); pointer-events:none; }
+
+.media-title{ margin:14px 2px 8px; font:800 clamp(18px,2.2vw,22px)/1 Poppins,Inter,system-ui; color:#0f172a; }
+.media-sub{ margin:0 2px 16px; color:#475569; }
+
+.media-grid{ columns:1; column-gap:12px; }
+@media (min-width:560px){ .media-grid{ columns:2; } }
+@media (min-width:980px){ .media-grid{ columns:3; } }
+
+.media-card{ display:block; break-inside:avoid; margin:0 0 12px; border-radius:14px; overflow:hidden;
+  box-shadow:0 6px 20px rgba(2,6,23,.10); background:#fff; transition:transform .18s ease, box-shadow .18s ease; }
+.media-card:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(2,6,23,.16); }
+.media-card img{ display:block; width:100%; height:auto; }
+.media-cap{ padding:10px 12px; font:600 13px/1.25 Inter,system-ui; color:#334155; }
+
+
+/* Full-bleed pano/video */
+.pano-bleed{
+  width:100vw;
+  margin:24px calc(50% - 50vw) 16px;   /* выходим из контейнера */
+}
+.pano-bleed .frame{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;                  /* 16:9 */
+  background:#000;
+  border-radius:12px;                  /* можно 0, если хочешь строго «в край» */
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(2,6,23,.12);
+}
+.pano-bleed iframe{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  border:0; outline:0;
+}
+
+
+
+/* Full-bleed media hero */
+.media-hero{
+  width:100vw;
+  margin:24px calc(50% - 50vw) 16px; /* bleed edge-to-edge */
+  position:relative;
+}
+.media-hero .frame{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;           /* 16:9 */
+  background:#000;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(2,6,23,.12);
+}
+.media-hero iframe{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  border:0; outline:0;
+}
+
+/* Soft marketing overlay */
+.media-hero .overlay{
+  position:absolute; inset:0; pointer-events:none;
+  border-radius:12px;
+  background:
+    radial-gradient(900px 360px at 72% 0%,
+      rgba(37,124,255,.14) 0%,
+      rgba(37,124,255,0) 60%)
+    ;
+}
+
+
+/* Make the video cover its container (no black bars) */
+.media-hero{ width:100vw; margin:24px calc(50% - 50vw) 16px; height:70vh; position:relative; }
+.media-hero .frame{ position:relative; width:100%; height:100%; padding:0; background:#000; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,.12); }
+.media-hero iframe{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  border:0; outline:0;
+}
+/* Cover logic: fill width on wide screens, fill height on tall screens */
+@media (min-aspect-ratio:16/9){
+  .media-hero iframe{ width:100vw; height:56.25vw; }
+}
+@media (max-aspect-ratio:16/9){
+  .media-hero iframe{ width:177.78vh; height:100vh; }
+}
+
+/* Optional soft overlay (not black) */
+.media-hero .overlay{
+  position:absolute; inset:0; pointer-events:none; border-radius:12px;
+  background:radial-gradient(900px 360px at 72% 0%, rgba(37,124,255,.14) 0%, rgba(37,124,255,0) 60%);
+}
+
+
+
+.media-title{ font:800 clamp(18px,2.2vw,22px)/1.2 Poppins,Inter,system-ui; margin:8px 0 4px; }
+.media-sub{ color:#64748b; margin:0 0 14px; }
+
+/* Masonry-like grid (2-cols desktop, 1-col mobile) */
+.media-grid{
+  display:grid; gap:12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width:740px){
+  .media-grid{ grid-template-columns: 1fr 1fr; }
+  /* stagger right column to create a chessboard look */
+  .media-grid .tile:nth-child(even){ margin-top: 24px; }
+}
+
+/* Big tiles */
+.tile{
+  position:relative; overflow:hidden; border-radius:14px;
+  background:#000; box-shadow:0 10px 26px rgba(2,6,23,.12);
+  isolation:isolate;
+}
+.tile img{
+  width:100%; height:100%; display:block; object-fit:cover;
+  transition: transform .5s ease, filter .5s ease;
+}
+.tile:hover img{ transform:scale(1.03); }
+
+/* Size mix for the checkerboard effect */
+.tile.wide{ aspect-ratio:16/9; }
+.tile.tall{ aspect-ratio:4/5; }
+
+/* On small screens all tiles become wide for better fit */
+@media (max-width:739.98px){
+  .tile.tall{ aspect-ratio:16/9; }
+}
+
+
+/* === Gallery: no headings, no radius, minimal gaps === */
+.media-title,
+.media-sub { display: none !important; }
+
+.media-showcase { margin: 16px auto 24px; } /* чуть компактнее */
+
+.media-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;                      /* минимальный зазор */
+}
+@media (min-width:740px){
+  .media-grid{ grid-template-columns: 1fr 1fr; }
+  .media-grid .tile:nth-child(even){ margin-top: 4px; } /* лёгкая «шахматка» */
+}
+
+/* большие плиты без скруглений и теней */
+.tile{
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background:#000;
+  overflow: hidden;
+}
+.tile img{
+  display:block;
+  width:100%; height:100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  transition: none;              /* без hover-эффектов, если нужно максимально строго */
+}
+
+/* Split blocks (text + image) */
+.split {
+  width:min(1200px,95vw);
+  margin:28px auto;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  align-items:center;
+  gap:24px;
+}
+.split .txt h2{
+  margin:0 0 8px;
+  font:800 clamp(20px,2.8vw,30px)/1.2 Poppins,Inter,system-ui;
+  color:#0f172a;
+}
+.split .txt p{
+  margin:0;
+  color:#475569;
+  font:500 clamp(14px,1.6vw,16px)/1.6 Inter,system-ui;
+}
+.split .media{
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(2,6,23,.12);
+}
+.split .media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  aspect-ratio:4/3;
+}
+
+/* Chessboard variant (image left on desktop) */
+@media (min-width:901px){
+  .split.alt{ grid-template-columns:1fr 1.1fr; }
+  .split.alt .media{ order:-1; }
+}
+
+/* Mobile: stack */
+@media (max-width:900px){
+  .split{ grid-template-columns:1fr; gap:14px; }
+  .split .media{ order:-1; }          /* image first */
+  .split.alt .media{ order:-1; }      /* keep same order */
+}
+
+/* Full-bleed photo (edge to edge) */
+.full-bleed-photo{
+  width:100vw;
+  margin:28px calc(50% - 50vw);
+}
+.full-bleed-photo .frame{
+  position:relative;
+  height:100vh;                       /* full screen */
+  min-height:70vh;                    /* safety on small laptops */
+  background:#000;
+  overflow:hidden;
+}
+.full-bleed-photo img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
+
+
+/* Bigger containers */
+.media-showcase{ width:min(1400px,96vw); }      /* gallery wider */
+.split{ width:min(1400px,96vw); }               /* split blocks wider */
+
+/* Make the image column larger on desktop */
+.split{ grid-template-columns:.9fr 1.1fr; }     /* text | image */
+.split.alt{ grid-template-columns:1.1fr .9fr; } /* image | text */
+
+/* Taller images inside split blocks */
+.split .media img{ aspect-ratio:16/9; }         /* was 4/3 */
+@media (min-width:1100px){
+  .split .media img{ min-height:460px; }        /* give them more presence */
+}
+@media (max-width:900px){
+  .split{ grid-template-columns:1fr; }          /* stack on mobile */
+  .split .media img{ min-height:40vh; }         /* large but safe on phones */
+}
+
+/* Full-bleed photo stays truly full screen */
+.full-bleed-photo .frame{ height:100vh; min-height:80vh; }
+
+
+
+/* ==== Text reveal (scroll-in) ==== */
+:root{ --ease: cubic-bezier(.22,.8,.27,1); }
+
+.reveal{ --stagger: .06s; }
+.reveal [data-animate]{
+  opacity:0; transform: translateY(12px); filter: blur(3px);
+  transition: transform .6s var(--ease), opacity .6s var(--ease), filter .6s var(--ease);
+  transition-delay: var(--d,0s);
+}
+.reveal.is-in [data-animate]{ opacity:1; transform:none; filter: blur(0); }
+
+/* Headline: word-by-word entrance */
+.words span{
+  display:inline-block;
+  opacity:0; transform: translateY(12px);
+  filter: blur(3px);
+  transition: transform .55s var(--ease), opacity .55s var(--ease), filter .55s var(--ease);
+  transition-delay: calc(var(--word-index) * .035s);
+}
+.reveal.is-in .words span{ opacity:1; transform:none; filter: blur(0); }
+
+/* Gradient underline that grows after reveal */
+.reveal-underline{ position:relative; }
+.reveal-underline::after{
+  content:""; position:absolute; left:0; bottom:-8px; height:3px; width:0%;
+  background: linear-gradient(90deg,#1d9bf0,#7c3aed);
+  border-radius:999px;
+  transition: width .65s var(--ease) .25s;
+}
+.reveal.is-in .reveal-underline::after{ width:100%; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal [data-animate], .words span{ transition:none !important; opacity:1 !important; transform:none !important; filter:none !important; }
+  .reveal-underline::after{ width:100%; }
+}
+
+
+/* Layout tokens */
+:root{
+  --wrap: min(1200px, 95vw);
+  --radius: 16px;
+  --shadow: 0 18px 46px rgba(2,6,23,.12);
+  --accent: #257cff;
+}
+
+/* Base feature block (image + copy) */
+.feature{
+  width: var(--wrap);
+  margin: 32px auto;
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;      /* big image */
+  gap: clamp(16px, 2vw, 28px);
+  align-items: center;
+}
+
+/* Flip sides for checkerboard */
+.feature.alt{
+  grid-template-columns: .92fr 1.08fr;
+}
+.feature.alt .media{ order: 2; }
+.feature.alt .copy { order: 1; }
+
+/* Media (make images large) */
+.feature .media{
+  height: clamp(360px, 48vw, 620px);        /* big, responsive height */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.feature .media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.015);
+  transition: transform .6s ease;
+}
+.feature:hover .media img{ transform: scale(1.03); }
+
+/* Text column */
+.feature .copy{
+  padding: clamp(6px, 1.2vw, 12px);
+}
+
+
+
+/* Underline accent that draws in */
+.fx-underline{
+  display: block;
+  height: 3px;
+  width: 0;
+  margin-top: 12px;
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  border-radius: 9999px;
+  animation: fx-draw .8s ease .15s forwards;
+}
+
+/* Keyframes */
+@keyframes fx-fadeUp{
+  from{ opacity:0; transform: translateY(10px); }
+  to  { opacity:1; transform: none; }
+}
+@keyframes fx-draw{ to{ width: clamp(160px, 38%, 360px); } }
+
+/* Full-bleed hero image (Block 3) */
+.feature-bleed,
+.feature.bleed{
+  width: 100vw;
+  margin: 32px calc(50% - 50vw);
+  position: relative;
+}
+.feature-bleed .media,
+.feature.bleed .media{
+  height: clamp(60vh, 72vh, 84vh);  /* fill most of the viewport */
+  border-radius: 0;
+  box-shadow: none;
+}
+.feature-bleed .media img,
+.feature.bleed .media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Soft marketing overlay (optional) */
+.feature-bleed::after,
+.feature.bleed::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  background: radial-gradient(900px 360px at 70% 0%, rgba(37,124,255,.14) 0%, rgba(37,124,255,0) 60%);
+}
+
+/* Responsive stack */
+@media (max-width: 900px){
+  .feature,
+  .feature.alt{
+    grid-template-columns: 1fr;
+  }
+  .feature .media{
+    height: clamp(220px, 52vw, 420px);
+  }
+}
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce){
+  .fx-title, .fx-lead{ animation: none; opacity:1; transform:none; }
+  .fx-underline{ animation: none; width: clamp(160px, 38%, 360px); }
+}
+
+
+
+
+
+/* Give right column more room inside the grid */
+.feature.alt{
+  /* left = fixed-ish text column, right = flexible media */
+  grid-template-columns: minmax(320px, 520px) 1fr;
+}
+
+/* Half-bleed image to the right edge of the viewport */
+.feature.alt .media.bleed-right{
+  /* push the right edge to the viewport edge */
+  margin-right: calc(50% - 50vw);
+  /* make it larger */
+  height: clamp(460px, 64vh, 820px);
+  /* crisp edge on the outside */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  /* shadows at the edge look odd; drop it */
+  box-shadow: none;
+}
+
+/* Hover scale still nice but a bit softer on huge image */
+.feature.alt .media.bleed-right img{
+  transform: scale(1.01);
+}
+.feature.alt:hover .media.bleed-right img{
+  transform: scale(1.025);
+}
+
+/* Mobile: stack and cancel the bleed */
+@media (max-width: 900px){
+  .feature.alt{
+    grid-template-columns: 1fr;
+  }
+  .feature.alt .media.bleed-right{
+    margin-right: 0;
+    height: clamp(240px, 52vw, 440px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+}
+
+/* Per-word animated reveal */
+.feature .fx-title .word,
+.feature .fx-lead .word{
+  display:inline-block;
+  white-space:pre;
+  opacity:0;
+  transform: translate3d(0, 0.9em, 0) rotate(8deg) skewY(6deg) scale(.92);
+  filter: blur(8px);
+  will-change: transform, opacity, filter;
+}
+
+/* Title: punchier motion with overshoot */
+.feature.inview .fx-title .word{
+  animation: titleWordIn .70s cubic-bezier(.2,.9,.2,1) var(--d) forwards;
+}
+
+/* Lead: smoother slide-up */
+.feature.inview .fx-lead .word{
+  animation: leadWordIn .60s cubic-bezier(.2,.8,.2,1) var(--d) forwards;
+}
+
+@keyframes titleWordIn{
+  0%   { opacity:0; transform: translate3d(0, 1.1em, 0) rotate(10deg) skewY(8deg) scale(.90); filter: blur(10px); }
+  60%  { opacity:1; transform: translate3d(0,-0.05em,0) rotate(0) skewY(0) scale(1.05); filter: blur(0); }
+  100% { opacity:1; transform: none; }
+}
+
+@keyframes leadWordIn{
+  0%   { opacity:0; transform: translate3d(0, .8em, 0) scale(.98); filter: blur(6px); }
+  100% { opacity:1; transform: none; filter: none; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .feature .fx-title .word,
+  .feature .fx-lead .word{
+    opacity:1 !important; transform:none !important; filter:none !important; animation:none !important;
+  }
+}
+
+
+/* если у body появится .no-anim — показываем текст без блюра */
+.no-anim .feature .fx-title .word,
+.no-anim .feature .fx-lead .word{
+  opacity:1; transform:none; filter:none; animation:none;
+}
+
+
+
+
+.feature .fx-title .word,
+.feature .fx-lead  .word{
+  display:inline-block;
+  white-space:pre;
+  opacity:0;
+  transform: translate3d(0, 0.9em, 0) rotate(8deg) skewY(6deg) scale(.92);
+  filter: blur(8px);
+  will-change: transform, opacity, filter;
+}
+
+.feature.inview .fx-title .word{
+  animation: titleWordIn .70s cubic-bezier(.2,.9,.2,1) var(--d) forwards;
+}
+.feature.inview .fx-lead .word{
+  animation: leadWordIn .60s cubic-bezier(.2,.8,.2,1) var(--d) forwards;
+}
+
+@keyframes titleWordIn{
+  0%   { opacity:0; transform: translate3d(0, 1.1em, 0) rotate(10deg) skewY(8deg) scale(.90); filter: blur(10px); }
+  60%  { opacity:1; transform: translate3d(0,-0.05em,0) rotate(0) skewY(0) scale(1.05); filter: blur(0); }
+  100% { opacity:1; transform: none; }
+}
+@keyframes leadWordIn{
+  0%   { opacity:0; transform: translate3d(0, .8em, 0) scale(.98); filter: blur(6px); }
+  100% { opacity:1; transform: none; filter: none; }
+}
+
+
+
+:root{ --fx-ease: cubic-bezier(.22,.8,.27,1); }
+
+/* стартовое состояние */
+.feature .fx-title,
+.feature .fx-lead{
+  opacity: 0;
+  transform: translateY(24px) scale(.98);
+  filter: blur(8px);
+  will-change: transform, opacity, filter;
+  position: relative;
+}
+
+/* появление (без линии) */
+.feature.is-in .fx-title{ animation: fx-pop .70s var(--fx-ease) forwards; }
+.feature.is-in .fx-lead { animation: fx-pop .70s var(--fx-ease) .12s forwards; }
+
+@keyframes fx-pop{
+  0%   { opacity:0; transform: translateY(24px) scale(.96); filter: blur(8px); letter-spacing:.3px; }
+  55%  { opacity:1; transform: translateY(-2px) scale(1.02); filter: blur(0); }
+  100% { opacity:1; transform: none; letter-spacing:0; }
+}
+
+/* ── опционально: «wipe»-проезд, НЕ линия, а мягкая плашка поверх текста.
+   Если не нужен вовсе — просто удали этот блок. */
+.feature .fx-title::after,
+.feature .fx-lead::after{
+  content:""; position:absolute; inset:-2px -6px;
+  background: rgba(226,232,240,.75);
+  transform: translateX(-101%);
+  border-radius:6px; pointer-events:none;
+}
+.feature.is-in .fx-title::after{ transition: transform .55s var(--fx-ease) .02s; transform: translateX(101%); }
+.feature.is-in .fx-lead::after { transition: transform .55s var(--fx-ease) .18s; transform: translateX(101%); }
+
+/* уважение prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce){
+  .feature .fx-title, .feature .fx-lead{
+    opacity:1; transform:none; filter:none; animation:none !important;
+  }
+  .feature .fx-title::after, .feature .fx-lead::after{ display:none; }
+}
+
+
+
+/* === Feature: clean text reveal === */
+:root { --fx-ease: cubic-bezier(.22,.8,.27,1); }
+
+.feature .fx-title,
+.feature .fx-lead{
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform .45s var(--fx-ease), opacity .45s var(--fx-ease);
+  will-change: transform, opacity;
+}
+
+/* триггер сработает и для .is-in, и для .inview */
+.feature.is-in .fx-title,
+.feature.inview .fx-title{
+  opacity: 1;
+  transform: none;
+}
+
+.feature.is-in .fx-lead,
+.feature.inview .fx-lead{
+  opacity: 1;
+  transform: none;
+  transition-delay: .08s; /* лёгкая ступенька после заголовка */
+}
+
+/* уважение prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce){
+  .feature .fx-title,
+  .feature .fx-lead{ opacity:1; transform:none; transition:none; }
+}
+
+
+/* ===== Energy section (scoped) ===== */
+:root { --ease: cubic-bezier(.22,.8,.27,1); }
+
+#energy-smart{
+  width: min(1400px, 96vw);
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: minmax(320px,520px) 1fr; /* текст | картинка */
+  align-items: center;
+  gap: 24px;
+}
+
+#energy-smart .media{
+  order: 2;                               /* картинка справа */
+  height: clamp(460px, 64vh, 820px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 46px rgba(2,6,23,.12);
+}
+#energy-smart .media img{
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transform: scale(1.01);
+  transition: transform .6s ease;
+}
+#energy-smart:hover .media img{ transform: scale(1.025); }
+
+#energy-smart .media.bleed-right{
+  margin-right: calc(50% - 50vw); /* полу-bleed к правому краю экрана */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+
+#energy-smart .copy{
+  order: 1;
+  padding: clamp(6px, 1.2vw, 12px);
+}
+
+/* Лёгкий reveal для заголовка и лида */
+#energy-smart .fx-title,
+#energy-smart .fx-lead{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .45s var(--ease), transform .45s var(--ease);
+  will-change: opacity, transform;
+}
+#energy-smart.is-in .fx-title,
+#energy-smart.inview .fx-title{         /* поддержка обоих классов */
+  opacity: 1; transform: none;
+}
+#energy-smart.is-in .fx-lead,
+#energy-smart.inview .fx-lead{
+  opacity: 1; transform: none;
+  transition-delay: .08s;               /* чуть позже текста заголовка */
+}
+
+/* Мобилка: стэк без bleed */
+@media (max-width: 900px){
+  #energy-smart{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  #energy-smart .media{
+    order: -1;                          /* картинка сверху */
+    height: clamp(240px, 52vw, 440px);
+    border-radius: 16px;
+    box-shadow: 0 18px 46px rgba(2,6,23,.12);
+    margin-right: 0;
+  }
+}
+
+/* Уважение reduce-motion */
+@media (prefers-reduced-motion: reduce){
+  #energy-smart .fx-title,
+  #energy-smart .fx-lead{
+    opacity: 1; transform: none; transition: none;
+  }
+}
+
+
+
+
+
+/* ---- Energy section: kill global blur/wipe ---- */
+#energy-smart .fx-title,
+#energy-smart .fx-lead{
+  filter: none !important;               /* убрать размытость */
+}
+
+#energy-smart .fx-title::after,
+#energy-smart .fx-lead::after{
+  content: none !important;              /* убрать выезжающую плашку */
+  display: none !important;
+}
+
+/* чтобы анимация точно дошла до чистого состояния */
+#energy-smart.is-in .fx-title,
+#energy-smart.is-in .fx-lead,
+#energy-smart.inview .fx-title,
+#energy-smart.inview .fx-lead{
+  opacity: 1;
+  transform: none;
+  filter: none !important;
+}
+
+
+
+/* === Energy Smart (scoped & clean) === */
+#energy-smart{
+  width:min(1400px,96vw);
+  margin:28px auto;
+  display:grid;
+  grid-template-columns:minmax(320px,520px) 1fr; /* текст | картинка */
+  align-items:center;
+  gap:24px;
+}
+
+/* Медиа справа, полублид к правому краю */
+#energy-smart .media{ 
+  order:2;
+  height:clamp(460px,64vh,820px);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 18px 46px rgba(2,6,23,.12);
+}
+#energy-smart .media.bleed-right{
+  margin-right:calc(50% - 50vw);
+  border-top-right-radius:0;
+  border-bottom-right-radius:0;
+  box-shadow:none;
+}
+#energy-smart .media img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Текст слева */
+#energy-smart .copy{ order:1; padding:clamp(6px,1.2vw,12px); }
+#energy-smart .fx-title{
+  margin:0 0 8px;
+  font:800 clamp(20px,2.8vw,30px)/1.2 Poppins,Inter,system-ui;
+  color:#0f172a;
+}
+#energy-smart .fx-lead{
+  margin:0;
+  color:#475569;
+  font:500 clamp(14px,1.6vw,16px)/1.6 Inter,system-ui;
+}
+
+/* Жёсткий сброс всех глобальных анимаций/эффектов только здесь */
+#energy-smart .fx-title,
+#energy-smart .fx-lead{
+  opacity:1 !important;
+  transform:none !important;
+  filter:none !important;
+  position:static;
+}
+#energy-smart .fx-title::after,
+#energy-smart .fx-lead::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* Нежный появляющийся эффект по желанию */
+@keyframes es-fade { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+#energy-smart.is-in .fx-title{ animation: es-fade .45s ease both; }
+#energy-smart.is-in .fx-lead { animation: es-fade .45s ease .08s both; }
+
+/* Мобильный стек без bleed */
+@media (max-width:900px){
+  #energy-smart{ grid-template-columns:1fr; gap:14px; }
+  #energy-smart .media{
+    order:-1;
+    height:clamp(240px,52vw,440px);
+    margin-right:0; border-radius:16px; box-shadow:0 18px 46px rgba(2,6,23,.12);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  #energy-smart .fx-title,#energy-smart .fx-lead{ animation:none !important; }
+}
+
+
+
+
+/* Half-bleed к левому краю экрана */
+.feature .media.bleed-left{
+  margin-left: calc(50% - 50vw);
+  height: clamp(460px, 64vh, 820px);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: none;
+}
+@media (max-width: 900px){
+  .feature .media.bleed-left{
+    margin-left: 0;
+    height: clamp(240px, 52vw, 440px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+}
+
+
+/* Чистый reveal только для наших секций с data-reveal */
+.feature[data-reveal] .fx-title,
+.feature[data-reveal] .fx-lead{
+  opacity: 0;
+  transform: translateY(8px);
+  filter: none !important;               /* без размытия */
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
+}
+
+/* Вход: просто плавное появление */
+.feature[data-reveal].is-in .fx-title,
+.feature[data-reveal].is-in .fx-lead{
+  opacity: 1;
+  transform: none;
+}
+
+/* Выключаем все «wipe/overlay/word-by-word» внутри этих секций */
+.feature[data-reveal] .fx-title::after,
+.feature[data-reveal] .fx-lead::after{ content: none !important; display: none !important; }
+.feature[data-reveal] .fx-title .word,
+.feature[data-reveal] .fx-lead  .word{ animation: none !important; filter: none !important; transform: none !important; }
+
+
+/* уникальная кнопка: центр + отступы + стиль */
+.btn-unique-donate{
+  display:block;               /* чтобы можно было центрировать margin-ом */
+  width:max-content;           /* сжимаем по контенту */
+  margin:20px auto 18px;       /* сверху/снизу отступы, по центру по горизонтали */
+  height:46px;
+  padding:0 26px;
+  border-radius:9999px;
+  background:#ff7a1a;
+  border:1px solid #ff7a1a;
+  color:#fff;
+  box-shadow:0 10px 28px rgba(255,122,26,.28);
+  text-decoration:none;
+  line-height:46px;            /* выравнивание текста по высоте */
+}
+
+/* ховеры/фокус — тоже только для неё */
+.btn-unique-donate:hover{ filter:brightness(.96); }
+.btn-unique-donate:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 6px rgba(255,122,26,.28);
+}
+
+
+
+
+
+
+  </style>
+
+<style>
+  /* === Survey panel (scoped) === */
+  #survey-backdrop{
+    position:fixed; inset:0; background:rgba(0,0,0,.5);
+    z-index:1000; opacity:0; pointer-events:none; transition:opacity .3s ease;
+  }
+  #survey-backdrop.visible{ opacity:1; pointer-events:auto; }
+
+  #survey-panel{
+    position:fixed; top:0; right:-100%; width:min(600px,90vw); height:100%;
+    background:#fff; color:#1b0825; z-index:1001; transition:right .4s ease;
+    box-shadow:-2px 0 8px rgba(0,0,0,.3); padding:16px; overflow:auto; display:flex; flex-direction:column;
+  }
+  #survey-panel.open{ right:0; }
+
+  #survey-close{ background:none; border:0; font-size:28px; align-self:flex-end; cursor:pointer; }
+
+  .survey-section{ margin-top:14px; }
+  .survey-grid{ display:grid; grid-template-columns:1fr; gap:8px; }
+  @media (min-width:600px){ .survey-grid{ grid-template-columns:repeat(2,1fr); } }
+
+  .survey-grid label{
+    display:flex; align-items:center; gap:8px; background:#f9f9f9; padding:8px;
+    border-radius:6px; border:1px solid #ccc; cursor:pointer; font-size:.92rem;
+  }
+
+  .survey-progress{ position:sticky; top:0; z-index:2; background:#fff; padding:10px 0; border-bottom:2px solid #eee; margin:12px 0; }
+  .survey-progress .t{ font-size:.8rem; text-align:center; color:#555; margin-bottom:4px; }
+  .survey-progress .bar{ height:8px; background:#eee; border-radius:5px; overflow:hidden; }
+  .survey-progress .bar > i{ display:block; height:100%; width:0%; background:linear-gradient(90deg,#fff,#fa9828); transition:width .3s ease; }
+
+  .survey-input, .survey-textarea{
+    width:100%; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:.95rem;
+  }
+  .survey-textarea{ min-height:90px; resize:vertical; }
+
+  .survey-consent{ margin-top:auto; padding-top:14px; border-top:1px solid #ddd; }
+  .survey-submit{ margin-top:10px; width:100%; padding:10px; font-size:1rem; background:#000; color:#fff; border:0; border-radius:8px; cursor:pointer; }
+
+  /* small note under sliders */
+  .survey-row{ display:grid; grid-template-columns:1fr auto; gap:8px; align-items:center; }
+  .survey-slider{ width:100%; }
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="#" title="Ken Sargent House">
+      <img src="img/lg.png" alt="iShare logo">
+    </a>
+    <nav class="nav">
+      <a href="#" class="nav-link active">Ken Sargent House</a>
+      <i class="nav-marker" aria-hidden="true"></i>
+    </nav>
+  </div>
+</header>
+
+
+<!-- HERO: 1:1 как на index -->
+<div class="section">
+  <header class="hero-phil is-brand compact luxe" role="banner" aria-label="Philanthropy hero">
+    <div class="hero-right">
+      <h1 class="hero-title">
+        <span class="hero-line">Ken Sargent House</span>
+        <span class="hero-line gradient">Where Comfort and Dignity Meet</span>
+      </h1>
+
+      <div class="hero-meta" aria-label="Project meta">
+        <span>Grande Prairie, Alberta</span><span class="dot"></span>
+        <span>Issued for 50% Client Review — Dec 13, 2024</span><span class="dot"></span>
+        <span>2 Storeys</span>
+      </div>
+
+      <p class="hero-lead">
+        Part of the Grande Prairie Rotary Clubs Wellness Centre campus — supportive housing with private suites and shared amenities.
+      </p>
+
+      <div class="hero-ctas">
+  <a href="#naming" class="btn btn-primary">Explore Opportunities</a>
+
+  <a href="https://ishare.giftabulatornow.com/app/give-now?locale=en-CA"
+     class="btn btn-orange btn-pill"
+     target="_blank" rel="noopener"
+     title="Discover how to make efficient donation">
+    Discover How To Make Tax Efficient Donations
+  </a>
+    <div id="deployment-e93f72fa-6b70-4f38-8f1a-372818291447" style="min-width:280px;"></div>
+  <script src="https://lumoraintel.com/api/embed/bundle.js" defer></script>
+  <a href="#survey" class="btn btn-primary btn-pill open-survey" role="button">
+  Start Survey
+</a>
+
+</div>
+
+
+
+      <ul class="hero-stats card" aria-label="Project highlights">
+        <li><strong>17</strong><span>Suites</span></li>
+        <li><strong>1,830&nbsp;m²</strong><span>Total Floor Area (16,216&nbsp;ft²)</span></li>
+        <li><strong>862&nbsp;m²</strong><span>Building Footprint (9,275&nbsp;ft²)</span></li>
+        <li><strong>4,234.8&nbsp;m²</strong><span>Site Area</span></li>
+        <li><strong>23</strong><span>Parking Stalls (2 barrier-free)</span></li>
+        <li><strong>19</strong><span>Parking Required</span></li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+
+
+<!-- 360° viewer -->
+<div id="viewer" aria-label="360° viewer">
+  <iframe id="panoFrame" src="https://app.seekbeak.com/v/ydjWPL4eq32" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+
+<!-- Top summary table -->
+<div class="section"><h2 class="table-title" id="naming">Naming Opportunities</h2></div>
+<div class="table-wrap">
+  <table class="naming-table">
+   <thead>
+  <tr>
+    <th>Space</th>
+    <th>Cost</th>
+    <th># Available</th>
+    <th>Donor</th>
+  </tr>
+</thead>
+<tbody>
+  <!-- $250,000 -->
+  <tr data-pano="https://app.seekbeak.com/v/Xw1LWmR2qL8">
+  <td>Family &amp; Patient Communal Space</td>
+  <td class="cost">$250,000</td>
+  <td class="avail">1</td>
+  <td class="donor"></td>
+</tr>
+
+  <tr data-pano="https://app.seekbeak.com/v/vPq4PgXnqAw">
+    <td>Playground</td>
+    <td class="cost">$250,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/7MqROm7b1dW">
+    <td>Solar Panelling</td>
+    <td class="cost">$250,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+
+  <!-- $150,000 -->
+  <tr data-pano="https://app.seekbeak.com/v/El18wnNMqOB">
+    <td>Dining Area</td>
+    <td class="cost">$150,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/YbjNDVYp1A7">
+    <td>Kitchen</td>
+    <td class="cost">$150,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/7MqROYMp1dW">
+    <td>Covered Porch</td>
+    <td class="cost">$150,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/5VjYM0Rpjob">
+    <td>Reception</td>
+    <td class="cost">$150,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+
+  <!-- $100,000 -->
+  <tr data-pano="https://app.seekbeak.com/v/YojXWkdAz8e">
+    <td>Quiet Space</td>
+    <td class="cost">$100,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+
+  <!-- $75,000 -->
+  <tr data-pano="https://app.seekbeak.com/v/RgqgM8nQz96">
+    <td>Suite A2 (Accessible Suite)</td>
+    <td class="cost">$75,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/RgqgM8nQz96">
+    <td>Suite A3 (Large Suite)</td>
+    <td class="cost">$75,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/4wjnL6Or1md">
+    <td>Playroom</td>
+    <td class="cost">$75,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+
+  <!-- $50,000 -->
+  <tr data-pano="https://app.seekbeak.com/v/YojXWRoLz8e">
+    <td>Bedroom (Suite)</td>
+    <td class="cost">$50,000</td>
+    <!-- TODO: set the real remaining quantity -->
+    <td class="avail">6</td>
+    <td class="donor">
+      <span class="badge badge-named">Fairview Health Complex Foundation</span>
+      <span class="badge badge-named">Aquatera</span>
+      <span class="badge badge-named">Canfor</span>
+    </td>
+  </tr>
+  <tr class="taken" data-pano="https://app.seekbeak.com/v/gd1p0Pn71XJ">
+    <td>Fitness Room</td>
+    <td class="cost">$50,000</td>
+    <td class="avail">0</td>
+    <td class="donor"><span class="badge badge-named">Tara Energy Services &amp; Bissel Family Funds</span></td>
+  </tr>
+  <tr class="taken" data-pano="https://app.seekbeak.com/v/YbjNDVAD1A7">
+    <td>Laundry Room</td>
+    <td class="cost">$50,000</td>
+    <td class="avail">0</td>
+    <td class="donor"><span class="badge badge-named">Victoria's Attic, Support the Girls</span></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/Xw1LW54DqL8">
+    <td>Social Space</td>
+    <td class="cost">$50,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/YojXWRoLz8e">
+    <td>Suite A</td>
+    <td class="cost">$50,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/76j0K3Q2zK9">
+    <td>Suite B</td>
+    <td class="cost">$50,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+
+  <!-- $25,000 -->
+  <tr class="taken" data-pano="https://app.seekbeak.com/v/4wjnL6Or1md">
+    <td>Children's Playroom</td>
+    <td class="cost">$25,000</td>
+    <td class="avail">0</td>
+    <td class="donor"><span class="badge badge-named">Catwauk Compression</span></td>
+  </tr>
+  <tr data-pano="https://app.seekbeak.com/v/lVjKnKYrzBb">
+    <td>Comfort Corner (Small)</td>
+    <td class="cost">$25,000</td>
+    <td class="avail">1</td>
+    <td class="donor"></td>
+  </tr>
+  <tr class="taken" data-pano="https://app.seekbeak.com/v/lVjKnKYrzBb">
+    <td>Comfort Corner</td>
+    <td class="cost">$25,000</td>
+    <td class="avail">0</td>
+    <td class="donor">
+      <span class="badge badge-named">Dynamud Logistic Services Inc.</span>
+      <span class="badge badge-named">Clearhills County</span>
+    </td>
+  </tr>
+  <tr class="taken" data-pano="https://app.seekbeak.com/v/R81yeNPn1Ad">
+    <td>Gazebo</td>
+    <td class="cost">$25,000</td>
+    <td class="avail">0</td>
+    <td class="donor"><span class="badge badge-named">Game Host</span></td>
+  </tr>
+  <tr class="taken" data-pano="https://app.seekbeak.com/v/LrqV3Kar1bp">
+    <td>Pantry</td>
+    <td class="cost">$25,000</td>
+    <td class="avail">0</td>
+    <td class="donor"><span class="badge badge-named">NuVista Energy</span></td>
+  </tr>
+</tbody>
+
+
+
+
+  </table>
+</div>
+
+
+
+<!-- MEDIA SHOWCASE -->
+<section class="media-showcase" id="showcase">
+  <!-- Big hero video -->
+ <div class="media-hero">
+  <div class="frame">
+    <iframe
+      src="https://www.youtube.com/embed/XpV5CmB3bvw?autoplay=1&mute=1&controls=0&playsinline=1&modestbranding=1&rel=0&loop=1&playlist=XpV5CmB3bvw"
+      title="Ken Sargent House — teaser"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+  </div>
+  <i class="overlay" aria-hidden="true"></i>
+</div>
+
+
+  
+<!-- 1) Energy — текст слева, фото справа (alt) -->
+<section id="energy-smart" class="feature alt" data-reveal>
+  <figure class="media bleed-right">
+    <img src="img/ks4.png" alt="Rooftop solar at Ken Sargent House" loading="lazy">
+  </figure>
+
+  <div class="copy">
+    <h2 class="fx-title">Energy-Smart, Future-Ready</h2>
+    <p class="fx-lead">
+      High-efficiency rooftop solar helps offset common-area loads, lowers operating costs,
+      and cuts carbon for years to come.
+    </p>
+  </div>
+</section>
+
+<section id="comfort-living" class="feature" data-reveal>
+  <figure class="media bleed-left">
+    <img src="img/ks6.png" alt="Warm, human-centered interiors" loading="lazy">
+  </figure>
+  <div class="copy">
+    <h2 class="fx-title">Warm, Family-First Design</h2>
+    <p class="fx-lead">
+      Daylight, intuitive wayfinding and soft finishes create calm, dignified routines for
+      residents and families throughout the day.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- Full-screen image -->
+<section class="full-bleed-photo">
+  <div class="frame">
+    <img src="img/ks8.png" alt="Aerial view, Ken Sargent House">
+  </div>
+</section>
+
+
+
+<section id="comfort-living" class="feature" data-reveal>
+  <figure class="media bleed-left">
+    <img
+      src="img/ks7.png"
+      alt="Aerial view of Ken Sargent House with rooftop solar; warm wood entry deck with ramp and stairs, paths and parking on the right."
+      loading="lazy">
+  </figure>
+
+  <div class="copy">
+    <h2 class="fx-title">Designed for Families</h2>
+<p class="fx-lead">
+  Soft finishes, clear wayfinding, and abundant daylight support dignified, unhurried daily life for residents and loved ones.
+</p>
+
+  </div>
+</section>
+
+
+
+<section id="garden-gazebo" class="feature alt" data-reveal>
+  <figure class="media bleed-right">
+    <img src="img/ks3.png" alt="Garden gazebo with morning light and flowers" loading="lazy">
+  </figure>
+
+  <div class="copy">
+    <h2 class="fx-title">Garden Gazebo</h2>
+    <p class="fx-lead">
+      A shaded outdoor pavilion for quiet conversation and reflection. Accessible paths, seating,
+      and soft planting create a calm, restorative place for residents and families.
+    </p>
+  </div>
+</section>
+
+
+
+<div class="wf-bleed">
+    <div class="hero-video">
+      <iframe src="https://www.youtube.com/embed/gNnFtDIplMM?autoplay=1&mute=1&controls=0&playsinline=1&modestbranding=1&rel=0&loop=1&playlist=frdUH-n-fng" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+<div class="hero-ctas">
+  
+
+  <a href="https://ishare.giftabulatornow.com/app/give-now?locale=en-CA"
+     class="btn btn-orange btn-unique-donate"
+     target="_blank" rel="noopener"
+     title="Discover how to make efficient donation">
+    Discover How To Make Tax Efficient Donations
+  </a>
+</div>
+
+
+<script>
+(() => {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('is-in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+
+  // watch both “reveal” styles + concrete IDs
+  document
+    .querySelectorAll('#energy-smart, #comfort-living, .reveal, [data-reveal]')
+    .forEach(el => io.observe(el));
+})();
+</script>
+
+
+
+
+
+
+<script>
+(() => {
+  // все feature-блоки с флагом data-reveal
+  const blocks = document.querySelectorAll('.feature[data-reveal]');
+  if (!blocks.length) return;
+
+  const reveal = el => el.classList.add('is-in');
+
+  const io = ('IntersectionObserver' in window)
+    ? new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            reveal(e.target);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -12% 0px' })
+    : null;
+
+  blocks.forEach(el => {
+    if (io) io.observe(el);
+  });
+
+  // страховка: если блок уже в поле зрения при load
+  window.addEventListener('load', () => {
+    blocks.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0) reveal(el);
+    });
+  }, { once: true });
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+/* Build KSH gallery (images only, no click) */
+(function(){
+  const grid = document.getElementById('kshMasonry');
+  if(!grid) return;
+
+  // Images from your /img folder (add/remove as needed)
+  const imgs = [
+    'img/ks2.png',
+    'img/ks3.png',
+    'img/ks4.png',
+    'img/ks5.png',
+    'img/ks6.png',
+    'img/ks7.png',
+    'img/ks8.png'
+  ];
+
+  // Alternate sizes to get a chessboard pattern
+  imgs.forEach((src, i) => {
+    const fig = document.createElement('figure');
+    fig.className = 'tile ' + (i % 2 === 0 ? 'tall' : 'wide');
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Ken Sargent House render ' + (i+1);
+    img.loading = 'lazy';
+
+    fig.appendChild(img);
+    grid.appendChild(fig);
+  });
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<!-- Header behavior: scroll progress + auto hide -->
+<script>
+(function(){
+  const header = document.querySelector('.site-header');
+  const nav    = document.querySelector('.nav');
+  const links  = Array.from(document.querySelectorAll('.nav .nav-link'));
+  const bar = document.createElement('div'); bar.className = 'scrollbar'; header.appendChild(bar);
+
+  let lastY = window.scrollY, ticking = false;
+
+  function onScroll(){
+    const y  = window.scrollY;
+    const dh = document.documentElement.scrollHeight - innerHeight;
+    const p = dh > 0 ? (y / dh) : 0;
+    bar.style.transform = `scaleX(${p})`;
+    header.classList.toggle('is-compact', y > 24);
+
+    const delta = y - lastY;
+    const hide = Math.abs(delta) > 4 && y > 300 && delta > 0;
+    header.classList.toggle('is-hidden', hide);
+    lastY = y;
+  }
+
+  window.addEventListener('scroll', ()=>{
+    if (!ticking){ requestAnimationFrame(()=>{ onScroll(); ticking = false; }); ticking = true; }
+  }, {passive:true});
+  onScroll();
+
+  // Hover marker
+  if (nav && links.length){
+    const marker = document.querySelector('.nav-marker');
+    function moveMarker(el){
+      const nb = nav.getBoundingClientRect(), rb = el.getBoundingClientRect();
+      marker.style.left  = (rb.left - nb.left - 4) + 'px';
+      marker.style.width = (rb.width + 8) + 'px';
+    }
+    function toActive(){
+      const active = nav.querySelector('.nav-link.active') || links[0];
+      if (active) moveMarker(active);
+    }
+    links.forEach(a=>{
+      a.addEventListener('mouseenter', ()=> moveMarker(a));
+      a.addEventListener('focus',     ()=> moveMarker(a));
+    });
+    nav.addEventListener('mouseleave', toActive);
+    window.addEventListener('resize',  toActive);
+    toActive();
+  }
+})();
+</script>
+
+<!-- Table rows → 360 viewer -->
+<script>
+(function(){
+  const frame = document.getElementById('panoFrame');
+  document.querySelectorAll('tbody tr[data-pano]').forEach(tr=>{
+    tr.tabIndex=0; tr.setAttribute('role','button');
+    tr.addEventListener('click',()=>{
+      const url = tr.getAttribute('data-pano'); if(!url) return;
+      frame.src = url;
+      document.querySelectorAll('tbody tr.active').forEach(r=>r.classList.remove('active'));
+      tr.classList.add('active');
+    });
+    tr.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tr.click(); }});
+  });
+})();
+</script>
+
+
+<script>
+(function () {
+  function buildKshDropdown() {
+    // remove previous UI
+    document.querySelectorAll('.viewer-ui').forEach(el => el.remove());
+
+    const viewer = document.getElementById('viewer');
+    const frame  = document.getElementById('panoFrame');
+    if (!viewer || !frame) return;
+
+    // UI container + select
+    const ui = document.createElement('div');
+    ui.className = 'viewer-ui';
+
+    const select = document.createElement('select');
+    select.id = 'panoSelect';
+    select.setAttribute('aria-label','Select a panorama');
+
+    const ph = document.createElement('option');
+    ph.value = '';
+    ph.textContent = 'Select a panorama';
+    ph.disabled = true; ph.hidden = true; ph.selected = true;
+    select.appendChild(ph);
+
+    ui.appendChild(select);
+    viewer.appendChild(ui);
+
+    // collect rows from visible KSH tables
+    const urlToRow = new Map();
+    const noUrl = new Set();
+    let lastValid = '';
+
+    document.querySelectorAll('.table-wrap:not(.is-hidden)').forEach((wrap, idx) => {
+      const table = wrap.querySelector('.naming-table');
+      if (!table) return;
+
+      const label =
+        wrap.previousElementSibling?.querySelector('.table-title')?.textContent?.trim()
+        || `Table ${idx + 1}`;
+
+      const group = document.createElement('optgroup');
+      group.label = label;
+
+      table.querySelectorAll('tbody tr').forEach((tr, i) => {
+        const name = (tr.cells?.[0]?.textContent || `Item ${i + 1}`).trim();
+        const costCell = tr.querySelector('td.cost') || tr.cells?.[1];
+        const rawCost = costCell ? costCell.textContent.replace(/\s+/g,' ').trim() : '';
+        const labelText = rawCost ? `${name} — ${rawCost}` : name;
+
+        const url = tr.getAttribute('data-pano') || '';
+        const opt = document.createElement('option');
+
+        if (url) { opt.value = url; urlToRow.set(url, tr); }
+        else { const v = `__no_url__${idx}_${i}`; opt.value = v; noUrl.add(v); }
+
+        opt.textContent = labelText;
+        group.appendChild(opt);
+
+        // row -> viewer
+        tr.tabIndex = 0; tr.setAttribute('role','button');
+        tr.addEventListener('click', () => {
+          if (!url) return;
+          if (select.querySelector(`option[value="${CSS.escape(url)}"]`)) {
+            select.value = url; lastValid = url;
+          }
+          frame.src = url;
+          document.querySelectorAll('.naming-table tbody tr.active').forEach(r => r.classList.remove('active'));
+          tr.classList.add('active');
+        });
+        tr.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tr.click(); }
+        });
+      });
+
+      if (group.children.length) select.appendChild(group);
+    });
+
+    // add "Overall Panorama" if current src is not in tables
+    const initialSrc = frame.getAttribute('src');
+    if (!urlToRow.has(initialSrc)) {
+      const quick = document.createElement('optgroup');
+      quick.label = 'Quick links';
+      const opt = document.createElement('option');
+      opt.value = initialSrc;
+      opt.textContent = 'Overall Panorama';
+      quick.appendChild(opt);
+      select.prepend(quick);
+    }
+
+    // select -> viewer
+    select.addEventListener('change', () => {
+      const val = select.value;
+      if (noUrl.has(val)) {
+        select.classList.add('invalid');
+        setTimeout(() => select.classList.remove('invalid'), 600);
+        if (lastValid && select.querySelector(`option[value="${CSS.escape(lastValid)}"]`)) {
+          select.value = lastValid;
+        } else {
+          select.selectedIndex = 0;
+        }
+        return;
+      }
+      lastValid = val;
+      document.querySelectorAll('.naming-table tbody tr.active').forEach(r => r.classList.remove('active'));
+      const tr = urlToRow.get(val);
+      if (tr) tr.classList.add('active');
+      frame.src = val;
+    });
+
+    // init selection
+    if (urlToRow.has(initialSrc)) {
+      select.value = initialSrc; lastValid = initialSrc;
+      urlToRow.get(initialSrc)?.classList.add('active');
+    } else {
+      select.selectedIndex = 1; // selects "Overall Panorama"
+    }
+  }
+
+  // expose and run
+  window.buildKshDropdown = buildKshDropdown;
+  buildKshDropdown();
+
+  // call again after you edit table rows dynamically
+  // window.buildKshDropdown();
+})();
+</script>
+
+
+<script>
+/* IntersectionObserver: toggles .is-in when block enters viewport */
+(function(){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.25 });
+
+  // Split headline into word spans
+  function splitWords(el){
+    const text = (el.textContent || "").trim().split(/\s+/);
+    el.textContent = "";
+    text.forEach((w,i)=>{
+      const s = document.createElement("span");
+      s.textContent = w + (i < text.length - 1 ? " " : "");
+      s.style.setProperty("--word-index", i);
+      el.appendChild(s);
+    });
+    el.classList.add("words");
+  }
+
+  // Observe all .reveal blocks
+  document.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+  // Prepare headlines that need word animation
+  document.querySelectorAll(".reveal-words").forEach(splitWords);
+})();
+</script>
+
+<!-- === Survey Backdrop & Panel (14 questions, no sliders) === -->
+<div id="survey-backdrop" aria-hidden="true"></div>
+<aside id="survey-panel" aria-hidden="true" aria-label="Charitable survey side panel">
+  <button id="survey-close" aria-label="Close survey">&times;</button>
+
+  <h2>Let's talk about your charitable efforts</h2>
+  <p>Please fill out this short questionnaire to help us understand how we can support your charitable goals.</p>
+
+  <!-- Contact -->
+  <div class="survey-section">
+    <label>Name <input class="survey-input" type="text" name="name" required></label>
+    <label>Email Address <input class="survey-input" type="email" name="email" required></label>
+    <label>Phone Number <input class="survey-input" type="tel" name="phone"></label>
+  </div>
+
+  <!-- Progress -->
+  <div class="survey-progress">
+    <div class="t" id="survey-progress-text">0% completed</div>
+    <div class="bar"><i id="survey-progress-bar"></i></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="survey-section">
+    <h3>1 In your lifetime how have you accumulated your wealth?</h3>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="wealth" value="personal_initiative"> Personal initiative</label>
+      <label><input type="checkbox" name="wealth" value="successful_investment"> Successful investment</label>
+      <label><input type="checkbox" name="wealth" value="gifts"> Gifts</label>
+      <label><input type="checkbox" name="wealth" value="unexpected_good_fortune"> Unexpected good fortune</label>
+      <label><input type="checkbox" name="wealth" value="inheritance"> Inheritance</label>
+      <label><input type="checkbox" name="wealth" value="building_family_business"> Building or growing a family business</label>
+      <label><input type="checkbox" id="survey-wealth-other" name="wealth" value="other"> Other</label>
+    </div>
+    <div id="survey-wealth-other-wrap" style="display:none; margin-top:8px;">
+      <input class="survey-input" type="text" name="wealth_other" placeholder="Please specify your method of wealth accumulation">
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="survey-section">
+    <h3>2 To which of the following do you feel an obligation regarding the distribution of your wealth?</h3>
+    <p>Choose all that are important to you.</p>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="wealth_obligation" value="spouse"> Spouse</label>
+      <label><input type="checkbox" name="wealth_obligation" value="children"> Children</label>
+      <label><input type="checkbox" name="wealth_obligation" value="business"> Business</label>
+      <label><input type="checkbox" name="wealth_obligation" value="friends"> Friends</label>
+      <label><input type="checkbox" name="wealth_obligation" value="health_care"> Health Care institutions</label>
+      <label><input type="checkbox" name="wealth_obligation" value="community"> Community Institutions</label>
+      <label><input type="checkbox" name="wealth_obligation" value="parents"> Parents</label>
+      <label><input type="checkbox" name="wealth_obligation" value="religious"> Religious institutions</label>
+      <label><input type="checkbox" name="wealth_obligation" value="mentors"> Mentors</label>
+      <label><input type="checkbox" name="wealth_obligation" value="education"> Educational institutions</label>
+      <label><input type="checkbox" name="wealth_obligation" value="none"> None</label>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="survey-section">
+    <h3>3 Which values do you feel are most important to you in your life?</h3>
+    <p>Select all values that are important to you.</p>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="values" value="honesty_integrity"> Honest/Integrity</label>
+      <label><input type="checkbox" name="values" value="frugality"> Frugality</label>
+      <label><input type="checkbox" name="values" value="spirituality"> Spirituality</label>
+      <label><input type="checkbox" name="values" value="responsibility_for_actions"> Responsibility for Actions</label>
+      <label><input type="checkbox" name="values" value="fellowship"> Fellowship</label>
+      <label><input type="checkbox" name="values" value="recognition"> Recognition</label>
+      <label><input type="checkbox" name="values" value="respect_for_others"> Respect for others</label>
+      <label><input type="checkbox" name="values" value="generosity"> Generosity</label>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="survey-section">
+    <h3>4 Why is your first choice of most importance?</h3>
+    <p>Please explain why you ranked your first choice as the most important.</p>
+    <textarea class="survey-textarea" name="first_choice_reason" placeholder="Your explanation here..."></textarea>
+  </div>
+
+  <!-- Q5 -->
+  <div class="survey-section">
+    <h3>5 Which of the following associations are most important to you?</h3>
+    <p>Select all that apply.</p>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="associations" value="family_relationships"> Family relationships</label>
+      <label><input type="checkbox" name="associations" value="social_standing"> Social standing</label>
+      <label><input type="checkbox" name="associations" value="personal"> Personal</label>
+      <label><input type="checkbox" name="associations" value="education"> Education</label>
+      <label><input type="checkbox" name="associations" value="volunteerism"> Volunteerism</label>
+      <label><input type="checkbox" name="associations" value="career"> Career</label>
+      <label><input type="checkbox" name="associations" value="personal_achievement"> Personal achievement/Recreation/Leisure</label>
+      <label><input type="checkbox" name="associations" value="personal_initiative"> Personal initiative/Hard Work</label>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="survey-section">
+    <h3>6 What is your primary motivation for planning your estate?</h3>
+    <p>Select all that apply.</p>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="estate_planning" value="increase_inheritance"> To increase inheritance for heirs</label>
+      <label><input type="checkbox" name="estate_planning" value="reduce_tax"> To reduce tax</label>
+      <label><input type="checkbox" name="estate_planning" value="charitable_contributions"> To make charitable contributions</label>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="survey-section">
+    <h3>7 Which statement reflects your views regarding estate planning?</h3>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="estate-planning" value="spend-during-lifetime"> I prefer to spend my assets during my lifetime</label>
+      <label><input type="checkbox" name="estate-planning" value="left-to-heirs"> Whatever is left of my estate should pass to my heirs</label>
+      <label><input type="checkbox" name="estate-planning" value="specific-heirs"> There are certain monies I'd like to leave to specific heirs</label>
+      <label><input type="checkbox" name="estate-planning" value="maximize-inheritance"> I intend to plan my estate that will maximize my heirs' inheritance</label>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="survey-section">
+    <h3>8 You may be concerned that your heirs lack the necessary skills to manage wealth. Which statement most closely reflects your view?</h3>
+    <div class="survey-grid">
+      <label><input type="radio" name="skills" value="do-not-possess"> I believe my heirs do not possess the necessary skills</label>
+      <label><input type="radio" name="skills" value="do-possess"> I believe my heirs do possess the necessary skills</label>
+      <label><input type="radio" name="skills" value="unsure"> I am unsure of the level of interest</label>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="survey-section">
+    <h3>9 Which statement most closely reflects your level of personal involvement with charitable organizations, including volunteer time and/or money?</h3>
+    <div class="survey-grid">
+      <label><input type="radio" name="charity-involvement" value="little-or-no"> I have had little or no involvement with charities</label>
+      <label><input type="radio" name="charity-involvement" value="moderate"> I have had moderate involvement with charities</label>
+      <label><input type="radio" name="charity-involvement" value="active"> I have been active with charities</label>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="survey-section">
+    <h3>10 Which statement most closely reflects your thoughts regarding the transfer of charitable gifts through your estate plan?</h3>
+    <div class="survey-grid">
+      <label><input type="radio" name="charitable-gifts" value="no-intention"> Charity begins at home. I have no intention of providing for charitable organizations through my estate plan.</label>
+      <label><input type="radio" name="charitable-gifts" value="rather-charity"> I would rather direct money to charity than pay taxes.</label>
+      <label><input type="radio" name="charitable-gifts" value="consider-charity"> As long as my family legacy isn't compromised, I'd consider a charitable gift as part of my estate plan.</label>
+      <label><input type="radio" name="charitable-gifts" value="not-today"> I would like to include charitable gifts in the distribution of my estate in some form, however not today.</label>
+      <label><input type="radio" name="charitable-gifts" value="plan-inclusion"> I plan to include charitable gifts in the distribution of my estate.</label>
+      <label><input type="radio" name="charitable-gifts" value="philanthropy"> Philanthropy is the focal point of my estate plan.</label>
+    </div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="survey-section">
+    <h3>11 What do you think about transferring assets to charitable organizations during your lifetime, when you can see an immediate impact from your gifts?</h3>
+    <p>Select all that apply.</p>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="charitable-transfer" value="major-gifts"> I prefer to make major charitable gifts as soon as possible, so that I can see my assets work during my lifetime.</label>
+      <label><input type="checkbox" name="charitable-transfer" value="some-gifts"> I prefer to make some gifts today. I'd like to explore ways to use tools such as the GIFTABULATOR to achieve other financial objectives as well as philanthropic objectives.</label>
+      <label><input type="checkbox" name="charitable-transfer" value="small-amounts"> I prefer to give relatively small amounts today and wait to contribute my assets at my death.</label>
+      <label><input type="checkbox" name="charitable-transfer" value="no-contributions"> I do not intend to make charitable contributions.</label>
+    </div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="survey-section">
+    <h3>12 Which of the following statements reflect your view regarding the process of family philanthropy? Check all that apply.</h3>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="family-philanthropy" value="individual-thing"> Charitable giving is an individual thing, not easily transformed into a shared experience.</label>
+      <label><input type="checkbox" name="family-philanthropy" value="family-consensus"> Achieving a family consensus around giving is essential to successful family philanthropy.</label>
+      <label><input type="checkbox" name="family-philanthropy" value="resources-for-charity"> All individuals in the family should be provided with resources to give to charity as they see fit.</label>
+      <label><input type="checkbox" name="family-philanthropy" value="family-foundation"> A family foundation will enhance the process of family philanthropy by creating an entity in which all family members can play an important decision-making role.</label>
+      <label><input type="checkbox" name="family-philanthropy" value="private-foundation-complicated"> I view a private family foundation as complicated, and not required for effective family philanthropy.</label>
+      <label><input type="checkbox" name="family-philanthropy" value="shared-philanthropy-experience"> The experience of shared philanthropy provides an opportunity to use actions, not just words to teach children what is important.</label>
+    </div>
+  </div>
+
+  <!-- Q13 -->
+  <div class="survey-section">
+    <h3>13 Please select which area is of philanthropic interest.</h3>
+    <p>Select all that apply.</p>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="philanthropy" value="education"> Education</label>
+      <label><input type="checkbox" name="philanthropy" value="health"> Health</label>
+      <label><input type="checkbox" name="philanthropy" value="social-services"> Social Services</label>
+      <label><input type="checkbox" name="philanthropy" value="arts"> Arts</label>
+      <label><input type="checkbox" name="philanthropy" value="culture"> Culture</label>
+      <label><input type="checkbox" name="philanthropy" value="environment"> Environment and Wildlife</label>
+      <label><input type="checkbox" name="philanthropy" value="international"> International Affairs</label>
+      <label><input type="checkbox" name="philanthropy" value="religious"> Religious</label>
+    </div>
+  </div>
+
+  <!-- Q14 -->
+  <div class="survey-section">
+    <h3>14 Please indicate your preference(s) regarding recognition for philanthropic contributions. (Check all that apply)</h3>
+    <div class="survey-grid">
+      <label><input type="checkbox" name="recognition" value="thank_you_letter"> Thank you Letter</label>
+      <label><input type="checkbox" name="recognition" value="personal_phone_call"> Personal Phone Call</label>
+      <label><input type="checkbox" name="recognition" value="formal_group_reception"> Formal group reception</label>
+      <label><input type="checkbox" name="recognition" value="published_listing"> Published listing</label>
+      <label><input type="checkbox" name="recognition" value="news_release"> News Release</label>
+      <label><input type="checkbox" name="recognition" value="plaque_display"> Plaque or Permanent Display</label>
+      <label><input type="checkbox" name="recognition" value="meeting_with_ceo"> Private meeting with CEO</label>
+      <label><input type="checkbox" name="recognition" value="none"> None</label>
+    </div>
+  </div>
+
+  <div class="survey-consent">
+    <label style="display:flex; align-items:center; gap:8px; font-size:.9rem;">
+      <input id="survey-consent" type="checkbox" required>
+      I agree to the processing of my personal data in accordance with the <a href="#" target="_blank">Privacy Policy</a>.
+    </label>
+    <button class="survey-submit" id="survey-submit">Submit</button>
+  </div>
+</aside>
+
+
+<script>
+(function(){
+  const panel    = document.getElementById('survey-panel');
+  const backdrop = document.getElementById('survey-backdrop');
+  const openBtns = document.querySelectorAll('.open-survey');
+  const closeBtn = document.getElementById('survey-close');
+  const submitBtn= document.getElementById('survey-submit');
+
+  const wealthOther     = document.getElementById('survey-wealth-other');
+  const wealthOtherWrap = document.getElementById('survey-wealth-other-wrap');
+
+  const pBar  = document.getElementById('survey-progress-bar');
+  const pText = document.getElementById('survey-progress-text');
+
+  // --- Panel open/close
+  function openPanel(){
+    panel.classList.add('open');
+    backdrop.classList.add('visible');
+    panel.setAttribute('aria-hidden','false');
+    backdrop.setAttribute('aria-hidden','false');
+  }
+  function closePanel(){
+    panel.classList.remove('open');
+    backdrop.classList.remove('visible');
+    panel.setAttribute('aria-hidden','true');
+    backdrop.setAttribute('aria-hidden','true');
+  }
+  openBtns.forEach(b => b.addEventListener('click', e => { e.preventDefault(); openPanel(); }));
+  closeBtn.addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+
+  // --- "Other" field show/hide (Q1)
+  if (wealthOther){
+    wealthOther.addEventListener('change', () => {
+      wealthOtherWrap.style.display = wealthOther.checked ? 'block' : 'none';
+      updateProgress();
+    });
+  }
+
+  // --- Helpers
+  function isChecked(name){ return document.querySelectorAll(`input[name="${name}"]:checked`).length > 0; }
+  function hasText(name){ const el = document.querySelector(`[name="${name}"]`); return el && el.value.trim() !== ''; }
+
+  // --- Progress (14 вопросов)
+  function updateProgress(){
+    let answered = 0;
+    const total = 14;
+
+    if (isChecked('wealth') || hasText('wealth_other')) answered++;               // Q1
+    if (isChecked('wealth_obligation')) answered++;                               // Q2
+    if (isChecked('values')) answered++;                                          // Q3
+    if (hasText('first_choice_reason')) answered++;                               // Q4
+    if (isChecked('associations')) answered++;                                    // Q5
+    if (isChecked('estate_planning')) answered++;                                 // Q6
+    if (isChecked('estate-planning')) answered++;                                 // Q7
+    if (document.querySelector('input[name="skills"]:checked')) answered++;       // Q8
+    if (document.querySelector('input[name="charity-involvement"]:checked')) answered++; // Q9
+    if (document.querySelector('input[name="charitable-gifts"]:checked')) answered++;    // Q10
+    if (isChecked('charitable-transfer')) answered++;                             // Q11
+    if (isChecked('family-philanthropy')) answered++;                             // Q12
+    if (isChecked('philanthropy')) answered++;                                    // Q13
+    if (isChecked('recognition')) answered++;                                     // Q14
+
+    const percent = Math.round((answered / total) * 100);
+    pBar.style.width = percent + '%';
+    pText.textContent = percent + '% completed';
+  }
+
+  document.addEventListener('input', updateProgress);
+  document.addEventListener('DOMContentLoaded', updateProgress);
+
+  // --- Collect & submit
+  function getCheckedValues(name){
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(i => i.value);
+  }
+  function collectPayload(){
+    return {
+      // contacts
+      name:  (document.querySelector('[name="name"]')  || {}).value || '',
+      email: (document.querySelector('[name="email"]') || {}).value || '',
+      phone: (document.querySelector('[name="phone"]') || {}).value || '',
+
+      // Q1–Q14
+      wealth: getCheckedValues('wealth'),
+      wealth_other: (document.querySelector('[name="wealth_other"]') || {}).value || '',
+      wealth_obligation: getCheckedValues('wealth_obligation'),
+      values: getCheckedValues('values'),
+      first_choice_reason: (document.querySelector('[name="first_choice_reason"]') || {}).value || '',
+      associations: getCheckedValues('associations'),
+      estate_planning: getCheckedValues('estate_planning'),
+      estate_planning_statements: getCheckedValues('estate-planning'),
+      skills: (document.querySelector('input[name="skills"]:checked') || {}).value || null,
+      charity_involvement: (document.querySelector('input[name="charity-involvement"]:checked') || {}).value || null,
+      charitable_gifts: (document.querySelector('input[name="charitable-gifts"]:checked') || {}).value || null,
+      charitable_transfer: getCheckedValues('charitable-transfer'),
+      family_philanthropy: getCheckedValues('family-philanthropy'),
+      philanthropy: getCheckedValues('philanthropy'),
+      recognition: getCheckedValues('recognition'),
+
+      consent: document.getElementById('survey-consent')?.checked || false
+    };
+  }
+
+  submitBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const payload = collectPayload();
+
+    if (!payload.consent){
+      alert('Please agree to the Privacy Policy to continue.');
+      return;
+    }
+    try{
+      const res = await fetch('/api/survey', {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Network error');
+
+      alert('Thank you! Your response has been submitted.');
+      // reset
+      panel.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(i => i.checked = false);
+      panel.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea').forEach(i => i.value = '');
+      updateProgress();
+      closePanel();
+    }catch(err){
+      console.error(err);
+      alert('Submission failed. Please try again later.');
+    }
+  });
+})();
+</script>
+
+
+
+</body>
+</html>
